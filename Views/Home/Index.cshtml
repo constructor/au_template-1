@@ -1,0 +1,18 @@
+﻿@{  
+    Layout = "~/Views/Shared/_Layout_Au.cshtml";
+    ViewData["Title"] = "Home Page";
+}
+
+<div aurelia-app="main">Loading {ownerName}'s {title} Project...</div>
+
+@section scripts {
+<environment names="Development">
+  <script src="scripts/vendor-bundle.js" data-main="aurelia-bootstrapper"></script>
+ </environment>
+<environment names="Production">
+  <script src="scripts/vendor-bundle.js" data-main="aurelia-bootstrapper"></script>
+ </environment>
+ <environment names="Staging, Production">
+   <script src="scripts/vendor-bundle.js" data-main="aurelia-bootstrapper"></script>
+ </environment>
+}
